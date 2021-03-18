@@ -36,4 +36,11 @@ public class MemberService {
         return memberRepository.findById(memberId);
     }
 
+    public int updateMember(Member memberForm) throws SQLException{
+        return memberRepository.update(memberForm);
+    }
+
+    public int deleteMember(Long id) throws SQLException{
+        return memberRepository.delete(id);
+    }
 }
