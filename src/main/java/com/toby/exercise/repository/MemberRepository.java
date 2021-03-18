@@ -12,4 +12,6 @@ public interface MemberRepository {
     Optional<Member> findById(Long id) throws SQLException;
     Optional<Member> findByName(String name) throws SQLException;
     List<Member> findAll() throws SQLException;
+    int update(Member memberForm)throws SQLException;
+    int delete(Long id)throws SQLException;
 }

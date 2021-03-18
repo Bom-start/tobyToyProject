@@ -12,8 +12,9 @@
             </thead>
             <tbody>
             <tr th:each="member : ${members}">
-                <td th:text="${member.id}"></td>
+                <td><a th:href="@{/members/update/(id=${member.id})}" th:text="${member.id}"></a></td>
                 <td th:text="${member.name}"></td>
+                <td><a th:href="@{/members/delete(id=${member.id})}">삭제</a></td>
             </tr>
             </tbody>
         </table>
