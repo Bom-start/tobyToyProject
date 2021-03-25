@@ -1,5 +1,8 @@
 package com.toby.exercise.controller;
 
+import lombok.Builder;
+
+@Builder
 public class MemberForm {
 
     private String name;

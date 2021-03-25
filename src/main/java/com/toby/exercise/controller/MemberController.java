@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.sql.SQLException;
@@ -45,7 +46,7 @@ public class MemberController {
     }
 
     @PostMapping("/members/update")
-    public String update(Member memberForm)throws SQLException{
+    public String update(@RequestBody Member memberForm)throws SQLException{
         int cnt = memberService.updateMember(memberForm);
         String redirectUrl = "";
         if(cnt > 0){

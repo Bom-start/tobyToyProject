@@ -14,4 +14,5 @@ public interface MemberRepository {
     List<Member> findAll() throws SQLException;
     int update(Member memberForm)throws SQLException;
     int delete(Long id)throws SQLException;
+    int deleteAll()throws SQLException;
 }
