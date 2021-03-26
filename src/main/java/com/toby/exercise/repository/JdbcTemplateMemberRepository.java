@@ -62,6 +62,11 @@ public class JdbcTemplateMemberRepository implements MemberRepository{
         return jdbcTemplate.update("delete from member where id = ?", id);
     }
 
+    @Override
+    public int deleteAll() throws SQLException {
+        return jdbcTemplate.update("truncate table member ");
+    }
+
     private RowMapper<Member> memberRowMapper(){
         return new RowMapper<Member>(){
             @Override

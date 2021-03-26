@@ -1,7 +1,6 @@
 package com.toby.exercise.repository;
 
 import com.toby.exercise.domain.Member;
-import net.bytebuddy.asm.Advice;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
